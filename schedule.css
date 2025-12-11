@@ -1,0 +1,238 @@
+*{
+    font-family: "DM Sans", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   
+}
+
+#schedule{
+    padding: 7.5rem 0;
+}
+
+.container{
+    /* padding: 7.5rem 0; */
+    width: min(80%, 2000px);
+    margin-inline: auto;
+}
+
+.container h2{
+    text-align: center;
+    font-size: 2rem;
+    padding: 2rem;
+}
+u{
+    color: #0dcaf0;
+}
+
+.days{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-block: 1rem;
+
+
+}
+.days button{
+    background-color: white;
+    border-color:transparent;
+    border-left-color: rgba(110, 144, 151,0.1);
+    padding: 0;
+    margin: 0;
+    width: 25%;
+    text-align: left;
+    cursor: pointer;
+}
+
+
+.days button:hover{
+    border-left-color: rgb(13, 202, 240);
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, .175);
+    
+     span{
+    color: #0dcaf0;
+}
+}
+
+.days button h3{
+    padding: 1rem;
+    max-height: 100%;
+}
+
+.days button h3 span{
+    color: #000;
+    cursor: pointer;
+    font-size: 1.4rem;
+    display: block;
+}
+
+.days button h3 small{
+    color: #717275;;
+    cursor: pointer;
+    font-size: .7rem;
+}
+
+
+
+.event{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 0.6rem;
+    width: 100%;
+    margin-top: 2rem;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.3);
+    padding: 1.5rem;
+}
+
+.event .event-img img{
+    width: 100%;
+    border-radius: 1.25rem;
+}
+
+.event .info{
+    width: 100%;
+}
+
+.event .info h3{
+    margin-bottom:.625rem;
+    font-size: 1.5rem;
+    margin-bottom: 0.625rem;
+    color: black;
+    font-weight: 700;
+}
+
+.event .info p{
+     margin-bottom:1rem;
+    font-size: .9rem;
+    line-height: 1.35rem;
+    margin-bottom: 0.625rem;
+    color: #717275;
+    font-weight: 300;
+}
+
+.meetig-info{
+    margin-top: 1.5rem;
+    display: flex;
+    height: 2rem;
+    justify-content: space-between;
+    
+}
+
+
+.meeting-head{
+    display: flex;
+    gap: 0.8rem;
+}
+
+
+
+.meeting-head .head-img{
+    border-radius: 50%;
+    width: 3rem;
+    height: 3rem;
+    background: url('https://templatemo.com/templates/templatemo_575_leadership_event/images/avatar/happy-asian-man-standing-with-arms-crossed-grey-wall.jpg') center/cover no-repeat;
+    
+}
+.meeting-head .head-img2{
+    border-radius: 50%;
+    width: 3rem;
+    height: 3rem;
+    background: url('https://templatemo.com/templates/templatemo_575_leadership_event/images/avatar/portrait-good-looking-brunette-young-asian-woman.jpg') center/cover no-repeat;
+    
+}
+
+.meeting-head .head-img3{
+    border-radius: 50%;
+    width: 3rem;
+    height: 3rem;
+    background: url('https://templatemo.com/templates/templatemo_575_leadership_event/images/avatar/senior-man-white-sweater-eyeglasses.jpg') center/cover no-repeat;
+    
+}
+
+.time{
+    display: flex; 
+    gap: .2rem;
+}
+
+img{
+    max-width: 100%;
+}
+
+
+
+#BES{
+    background: url('https://templatemo.com/templates/templatemo_575_leadership_event/images/terren-hurst-blgOFmPIlr0-unsplash.jpg') top/cover no-repeat fixed;
+    max-height: fit-content;
+}
+
+.contents{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 4rem;
+    justify-content: space-between;
+
+}
+
+.contents .info h2{
+    text-align: left;
+    font-size: 2rem;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 1.5rem;
+    width: 100%;
+    padding: 0;
+
+}
+
+.contents .info p{
+    text-align: left;
+    font-size: .9rem;
+    color: white;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+
+}
+
+.contents .link{
+    margin: 1.5rem 0;
+    margin-top: 3rem;
+}
+
+.contents .link a{
+    text-decoration: none;
+    color: #212529;
+    background-color: #fff;
+    font-size: small;
+    font-weight: 700;
+    padding: .5rem 1rem;
+    border-radius: 1rem;
+    
+}
+
+.contents .link a:hover{
+    background-color: #0dcaf0;
+    color: #fff;
+}
+
+@media (max-width:991px){
+    .container{
+        width: min(80%, 990px);
+    }
+    .event{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .days button{
+        width: 50%;
+    }
+
+  
+
+    .contents{
+    display: block;
+}
+
+}
