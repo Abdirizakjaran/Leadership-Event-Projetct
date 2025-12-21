@@ -8,7 +8,688 @@
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
 
 <style>
+
+ 
+@media screen and (max-width: 960px) {
+    .menu-toggle {
+        display: flex;
+        z-index: 1001;
+    }
+
+    .nav-menu {
+        position: absolute;
+        top: 80px;
+        left: -100%; /* Waa qarsoonyahay marka hore */
+        flex-direction: column;
+        width: 100%;
+        height: 90vh;
+        background-color: #1f2a44;
+        transition: 0.5s;
+        padding-top: 20px;
+    }
+
+    .nav-menu.active {
+        left: 0; /* Wuu soo baxayaa marka la riixo */
+    }
+
+    .nav-menu li {
+        width: 100%;
+        text-align: center;
+        padding: 15px 0;
+    }
+
+    .btn-ticket a {
+        border-radius: 5px;
+    }
+}
 /* ================= RESET ================= */
+
+*{
+    font-family: "DM Sans", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   
+}
+
+#schedule{
+    padding: 7.5rem 0;
+}
+
+.container{
+    width: min(85%, 2000px);
+    margin-inline: auto;
+}
+
+.container .schedule-header{
+    text-align: center;
+    font-size: 2rem;
+    padding: 2rem;
+}
+u{
+    color: #0dcaf0;
+}
+
+.days{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-block: 1rem;
+
+
+}
+.days button{
+    background-color: white;
+    border-color:transparent;
+    border-left-color: rgba(110, 144, 151,0.1);
+    padding: 0;
+    margin: 0;
+    width: 25%;
+    text-align: left;
+    cursor: pointer;
+}
+
+
+.days button:hover{
+    border-left-color: rgb(13, 202, 240);
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, .175);
+    
+     span{
+    color: #0dcaf0;
+}
+}
+
+.days button h3{
+    padding: 1rem;
+    max-height: 100%;
+}
+
+.days button h3 span{
+    color: #000;
+    cursor: pointer;
+    font-size: 1.4rem;
+    display: block;
+}
+
+.days button h3 small{
+    color: #717275;;
+    cursor: pointer;
+    font-size: .7rem;
+}
+
+
+
+.event{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 0.6rem;
+    width: 100%;
+    margin-top: 2rem;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.3);
+    padding: 1.5rem;
+}
+
+.event .event-img img{
+    width: 100%;
+    border-radius: 1.25rem;
+}
+
+.event .info{
+    width: 100%;
+}
+
+.event .info h3{
+    margin-bottom:.625rem;
+    font-size: 1.5rem;
+    margin-bottom: 0.625rem;
+    color: black;
+    font-weight: 700;
+}
+
+.event .info p{
+     margin-bottom:1rem;
+    font-size: .9rem;
+    line-height: 1.35rem;
+    margin-bottom: 0.625rem;
+    color: #717275;
+    font-weight: 300;
+}
+
+.meetig-info{
+    margin-top: 1.5rem;
+    display: flex;
+    height: 2rem;
+    justify-content: space-between;
+    
+}
+
+
+.meeting-head{
+    display: flex;
+    gap: 0.8rem;
+}
+
+
+
+.meeting-head .head-img{
+    border-radius: 50%;
+    width: 3rem;
+    height: 3rem;
+    background: url('https://templatemo.com/templates/templatemo_575_leadership_event/images/avatar/happy-asian-man-standing-with-arms-crossed-grey-wall.jpg') center/cover no-repeat;
+    
+}
+.meeting-head .head-img2{
+    border-radius: 50%;
+    width: 3rem;
+    height: 3rem;
+    background: url('https://templatemo.com/templates/templatemo_575_leadership_event/images/avatar/portrait-good-looking-brunette-young-asian-woman.jpg') center/cover no-repeat;
+    
+}
+
+.meeting-head .head-img3{
+    border-radius: 50%;
+    width: 3rem;
+    height: 3rem;
+    background: url('https://templatemo.com/templates/templatemo_575_leadership_event/images/avatar/senior-man-white-sweater-eyeglasses.jpg') center/cover no-repeat;
+    
+}
+
+.time{
+    display: flex; 
+    gap: .2rem;
+}
+
+img{
+    max-width: 100%;
+}
+
+
+
+#BES{
+    background: url('https://templatemo.com/templates/templatemo_575_leadership_event/images/terren-hurst-blgOFmPIlr0-unsplash.jpg') top/cover no-repeat fixed;
+    max-height: fit-content;
+}
+
+.contents-1{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 4rem;
+    justify-content: space-between;
+
+}
+
+.contents-1 .info h2{
+    text-align: left;
+    font-size: 2rem;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 1.5rem;
+    width: 100%;
+    padding: 0;
+
+}
+
+.contents-1 .info p{
+    text-align: left;
+    font-size: .9rem;
+    color: white;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+
+}
+
+.contents-1 .link{
+    margin: 1.5rem 0;
+    margin-top: 3rem;
+}
+
+.contents-1 .link a{
+    text-decoration: none;
+    color: #212529;
+    background-color: #fff;
+    font-size: small;
+    font-weight: 700;
+    padding: .5rem 1rem;
+    border-radius: 1rem;
+    
+}
+
+.contents-1 .link a:hover{
+    background-color: #0dcaf0;
+    color: #fff;
+}
+
+
+
+
+/* ########################################################################################## */
+
+
+.container .contents{
+    padding-block: 4rem;
+    
+    
+}
+
+.container .contents header{
+    margin-bottom: 3rem;
+    text-align: center;
+    
+}
+
+ u{
+    color: #0dcaf0;
+
+}
+
+.container .contents header h2{
+    color: #000;
+    font-size: 1.8rem;
+    font-weight: 700;
+    line-height: 2.16rem;
+}
+
+.contents .cards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    gap: 1rem;
+    background-color: #1e1e1e;
+}
+.contents .cards .card{
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    max-height: fit-content;
+    border-radius: .6rem;
+    background-color: #fff;
+    box-shadow: 2px 1px 100px rgba(172, 166, 166, 0.4);
+    padding-block: 0 .6rem;
+    margin-top: 1rem;
+}
+
+.contents .cards .card .hero {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    background-color: #273053;
+    color: white;   
+    align-items: center;
+    
+}
+
+.contents .cards .card .hero h2{
+    width: 100%;
+}
+
+
+.contents .cards .card .pricing--body{
+    padding: 2rem;
+    font-weight: 400;
+    font-size: .9rem;
+    color: #717275;
+    line-height: 3rem;
+
+}
+
+.contents .cards .card .pricing--body .bottom{
+    border-top: 1px solid rgba(0, 0, 0, .2);
+    word-wrap: break-word;
+}
+
+.contents .cards .card .message{    
+    font-weight: 400;
+    font-size: .9rem;
+    color: #717275;
+}
+
+.contents .cards .card a{
+    text-decoration: none;
+    background-color: #273053;
+    color: #fff;
+    padding: .6rem 1rem;
+    border-radius: 3rem;
+    font-weight: 700;
+    font-size: .65rem;
+    line-height: .975rem;
+    margin-top: 1rem;
+}
+
+.contents .cards .card a:hover{
+    background-color: #0dcaf0;
+}
+
+#venue{
+    background-color: rgb(240, 248, 255);
+}
+
+.venue-header h2{
+    margin-bottom: 3rem;
+    font-size: 2.4rem;
+    font-weight: 700;
+    width: 100%;
+}
+
+
+.sub-contents{
+    display: flex;
+    gap: 1rem;
+}
+
+.map{
+    width: 100%;
+}
+.map iframe{
+    border-radius: 1rem;
+}
+
+.address{
+
+    width: 100%;
+    border-radius: 1rem;
+    background-color: white;
+    box-shadow: 1rem 1rem 5rem rgba(0,0,0,0.2);
+    overflow-x: hidden;
+}
+
+
+.address .address-header h2{
+    background-color: #273053;
+    color: #fff;
+    padding: 1rem;
+    font-size: 2.4rem;
+}
+
+.address .info{
+    line-height: 1.5rem;
+    padding: 2rem;
+    color: rgb(33, 37, 41);
+
+}
+
+.address .info h3{
+    line-height: 1.92rem;
+    margin-bottom: .5rem;
+    font-weight: 700;
+}
+
+.address .info p{
+    margin: 1.5rem 0 1rem 0;
+    color: #000;
+    font-size: 1rem;
+    line-height: 1.92rem;
+
+
+}
+
+#contact {
+    background: url('https://templatemo.com/templates/templatemo_575_leadership_event/images/maria-stewart-p4tj0g-_aMM-unsplash.jpg') top/cover  no-repeat fixed;
+}
+
+
+.form{
+    overflow-x: hidden;
+    border-radius: 1rem;
+    margin-inline: auto;
+    width: min(100%, 768px);
+}
+
+.form .form-header h2{
+     background-color: #273053;
+    color: #fff;
+    padding: 1rem;
+    font-size: 2.4rem;
+}
+
+.form form{
+    background-color: #fff;
+    padding: 2.5rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.form form .required{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    gap: .5rem;
+    
+
+}
+
+.form form .required input{
+    height: 2.5rem;
+    width: 100%;
+    border: 0;
+    padding: 15px;
+    background-color: #f0f8ff;
+    border-radius: 5px;
+    margin-bottom: 1.2rem;
+    line-height: 1.5rem;
+    font-weight: 500;
+}
+
+
+
+.form form textarea{
+    background-color: #f0f8ff;
+    border-radius: 5px;
+    margin-bottom: 1.2rem;
+    height: 8.8rem;
+    padding: 1rem;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.form form  button{
+    width: 100%;
+    background-color: #0dcaf0;
+    border-radius: 2rem;
+    border: 0;
+    padding: .8rem;
+    color: #fff;
+    font-weight: 700;
+}
+.form form  button:hover{
+    background-color: #273053;
+}
+
+
+
+.footer-head{
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+.logo{
+    color: #0dcaf0;
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    margin-bottom: 1.2rem;
+    font-size: 1rem;
+
+}
+
+.logo i, .logo i:hover{
+    color: #0dcaf0;
+    background-color: #fff;
+}
+
+footer i{
+    color: #000;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   font-weight: 600;
+   font-size: 2rem;
+   border-radius: 50%;
+   padding: 5px 5px 5px 5px;
+
+}
+
+footer i:hover{
+    background-color: #0dcaf0;
+    color: #fff;
+}
+
+.logo i{
+    font-size: 1.9rem;
+}
+
+.footer-foot{
+    margin-top: 3rem;
+    display: flex;
+   
+    justify-content: space-between;
+    font-weight: 100;
+    font-size: .7rem;
+    color: #1e1e1e;
+}
+
+.footer .copyright-btn{
+    max-width: 1000px;
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    align-items: center;
+    padding-block: 1rem;
+    
+
+}
+
+.footer .copyright-btn .copyright p{
+    line-height: 2rem;
+
+}
+
+.footer .copyright-btn .copyright p a{
+    text-decoration: none;
+    color: #1e1e1e;
+}
+
+.footer .copyright-btn .copyright p a:hover{
+    color: #0dcaf0;
+}
+
+
+.footer  ul{
+    display: flex;
+    gap: 1rem;
+   padding-block: 1rem;
+    width: 100%;
+    
+}
+
+
+
+.footer  li{
+    list-style: none;
+    
+
+}
+
+.footer  li:hover{
+    color: #0dcaf0;
+    cursor: pointer;
+
+}
+
+
+
+
+
+
+@media (max-width: 991px){
+
+
+    .sub-contents{
+    display: flex;
+    flex-direction: column;
+}
+
+    .venue-header h2{
+    font-size: 1.8rem;    
+}
+
+
+.footer-foot{
+    margin-top: 3rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    font-weight: 100;
+    font-size: .7rem;
+    color: #1e1e1e;
+}
+
+
+    .container{
+        width: min(80%, 990px);
+    }
+    .event{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .days button{
+        width: 50%;
+    }
+
+  
+
+    .contents-1{
+    display: block;
+}
+
+.contents .cards .card{
+    width: calc(min(50%, 991px) - 1rem);
+}
+
+}
+
+
+
+
+@media (max-width: 767px){
+
+    .contents .cards{
+        flex-wrap: wrap;
+    }
+
+    .contents .cards .card{
+    width: fit-content;
+}
+    .address .address-header h2{
+    font-size: 1.8rem;
+}
+
+.address .info p{
+    font-size: 1.2rem;
+}
+
+.form .form-header h2{
+    font-size: 1.8rem;
+}
+
+.form form .required{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: .5rem;
+
+}
+
+
+}
 *{
     margin:0;
     padding:0;
@@ -252,15 +933,106 @@ figcaption{
     .hero-info{
         flex-direction:column;
     }
+
+    /* ===== NAVBAR ===== */
+.navbar{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    background:#1f2a44;
+    padding:16px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    z-index:999;
+}
+
+.logo{
+    color:#14b789;
+    font-weight:700;
+    font-size:20px;
+    line-height:1.1;
+}
+
+/* ===== MENU ===== */
+.menu{
+    list-style:none;
+    display:flex;
+    gap:28px;
+    align-items:center;
+}
+
+.menu li a{
+    color:#fff;
+    text-decoration:none;
+    font-size:15px;
+    font-weight:500;
+}
+
+.menu li a:hover{
+    color:#14b789;
+}
+
+.menu .btn a{
+    background:#1a73ff;
+    padding:10px 20px;
+    border-radius:25px;
+    font-weight:600;
+}
+
+/* ===== HAMBURGER ===== */
+#menu-toggle{
+    display:none;
+}
+
+.menu-icon{
+    display:none;
+    font-size:28px;
+    color:#fff;
+    cursor:pointer;
+}
+
+/* ===== RESPONSIVE ===== */
+@media(max-width:768px){
+    .menu{
+        position:absolute;
+        top:100%;
+        left:0;
+        width:100%;
+        background:#1f2a44;
+        flex-direction:column;
+        align-items:flex-start;
+        padding:20px 8%;
+        gap:15px;
+        display:none;
+    }
+
+    /* show menu when checked */
+    #menu-toggle:checked + .menu-icon + .menu{
+        display:flex;
+    }
+
+    .menu-icon{
+        display:block;
+    }
+}
+
 }
 </style>
 </head>
 
 <body>
+<nav class="navbar">
+    <span class="logo">LEADERSHIP<br>EVENT</span>
 
-<nav>
-    <span>LEADERSHIP<br>EVENT</span>
-    <ul>
+    <!-- Hamburger checkbox -->
+    <input type="checkbox" id="menu-toggle">
+    <label for="menu-toggle" class="menu-icon">
+        ☰
+    </label>
+
+    <ul class="menu">
         <li><a href="#section_1">Home</a></li>
         <li><a href="#section_2">About</a></li>
         <li><a href="#section_3">Speakers</a></li>
@@ -268,9 +1040,10 @@ figcaption{
         <li><a href="#">Pricing</a></li>
         <li><a href="#">Venue</a></li>
         <li><a href="#">Contact</a></li>
-        <li><a href="#">Buy Tickets</a></li>
+        <li class="btn"><a href="#">Buy Tickets</a></li>
     </ul>
 </nav>
+
 
 <section id="section_1">
     <article>
@@ -317,7 +1090,7 @@ figcaption{
 <section id="section_3">
     <header>
         <h2>Our <u>Speakers</u></h2>
-        <p>Professional speakers and leaders</p>
+        <p>Professional speakers and leaders</p>~
     </header>
 
     <div>
@@ -352,6 +1125,407 @@ figcaption{
         </div>
     </footer>
 </section>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    
+    <link rel="stylesheet" href="schedule.css">
+    <title>Schedule</title>
+</head>
+<body>
+
+    <section id="schedule">
+
+
+   
+
+    <div class="container">
+
+        <h2 class="schedule-header">Next <u>Schedule</u></h2>
+
+        <div class="days">
+           <button>
+            <h3>
+                <span>Day One</span>
+                <small>july 12, 2022</small>
+            </h3>
+           </button>
+           <button>
+            <h3>
+                <span>Day Two</span>
+                <small>july 14, 2022</small>
+            </h3>
+           </button>
+           <button>
+            <h3>
+                <span>Day Three</span>
+                <small>july 16, 2022</small>
+            </h3>
+           </button>
+           <button>
+            <h3>
+                <span>Day four</span>
+                <small>july 18, 2022</small>
+            </h3>
+           </button>
+
+        </div>
+
+        <div class="events">
+
+            <div class="event">
+
+                <div class="event-img">
+                     <img src="https://templatemo.com/templates/templatemo_575_leadership_event/images/schedule/fabian-friedrich-JDUVM9_VaZE-unsplash.jpg" alt="">
+                </div>
+
+               
+
+                <div class="info">
+                    <h3>Startup Development Ideas</h3>
+                    <p>You are free to download any HTML CSS template from TemplateMo website. You can use any template for business purposes. You are not allowed to redistribute the downloadable ZIP file on any other template website. Thank you.</p>
+                    <div class="meetig-info">
+                        
+                        <div class="meeting-head">
+                            <div class="head-img"></div>
+                          
+                            <div class="name_and_title">
+                                <h4>Logan Wilson</h4>
+                                <small>CEO / Founder</small>
+                            </div>
+                            
+                        </div>
+                        <div class="time">
+                            <i class="fa-regular fa-clock"></i>
+                            <p>9:00 - 9:45 AM</p>
+                        </div>
+                        <div class="room">
+                            <p>Conference Hall 3</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="event">
+
+                <div class="event-img">
+                     <img src="https://templatemo.com/templates/templatemo_575_leadership_event/images/schedule/clayton-cardinalli-JMoFpdqL3XM-unsplash.jpg" alt="">
+                </div>
+
+               
+
+                <div class="info">
+                    <h3>Introduction to Online Businesses</h3>
+                    <p>Quisque mollis, ante non semper ultricies, nulla sapien sollicitudin augue, id scelerisque nunc turpis nec urna. Class aptent taciti sociosqu ad litora.</p>
+                    <div class="meetig-info">
+                        
+                        <div class="meeting-head">
+                            <div class="head-img2"></div>
+                          
+                            <div class="name_and_title">
+                                <h4>Natalie</h4>
+                                <small>Event Planner
+
+</small>
+                            </div>
+                            
+                        </div>
+                        <div class="time">
+                            <i class="fa-regular fa-clock"></i>
+                            <p> 10:00 - 10:45 AM
+</p>
+                        </div>
+                        <div class="room">
+                            <p>100-D Room</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="event">
+
+                <div class="event-img">
+                     <img src="https://templatemo.com/templates/templatemo_575_leadership_event/images/schedule/business-woman-making-presentation-office.jpg" alt="">
+                </div>
+
+               
+
+                <div class="info">
+                    <h3>Bootstrapping Startup</h3>
+                    <p>YClass aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Ut consequat purus posuere tortor efficitur, sit amet dignissim libero aliquam.</p>
+                    <div class="meetig-info">
+                        
+                        <div class="meeting-head">
+                            <div class="head-img3"></div>
+                          
+                            <div class="name_and_title">
+                                <h4>Thomas</h4>
+                                <small>Startup Coach
+
+</small>
+                            </div>
+                            
+                        </div>
+                        <div class="time">
+                            <i class="fa-regular fa-clock"></i>
+                            <p>11:00 - 11:45 AM</p>
+                        </div>
+                        <div class="room">
+                            <p> 100-B Room</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+
+
+
+
+            
+
+
+
+        </div>
+
+        
+
+    </div>
+
+     </section>
+
+
+     <section id="BES">
+
+        <div class="container">
+
+            <div class="contents-1">
+                <div class="info">
+                    <h2>Become an <u> event speaker?</u></h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut dolore</p>
+                </div>
+
+                <div class="link"><a href="/pricing">Register Today</a></div>
+            </div>
+            
+        </div>
+     </section>
+
+      <section id="Pricing">
+
+        <div class="container">
+            <div class="contents">
+                <header>
+                    <h2>Get Your <u>Tickets</u></h2>
+                </header>
+                <div class="cards">
+                    <div class="card">
+                        <div class="hero">
+                            <h2>Early Bird</h2>
+                            <h3>$640</h3>
+                        </div>
+
+                        <div class="pricing--body">
+                            <p><i class="fa-solid fa-mug-saucer"></i> All-Day Coffee + Snacks</p>
+                            <p> <i class="fa-solid fa-gamepad"></i> After Party</p>
+                            <p><i class="fa-solid fa-message"></i> 24/7 Support</p>
+                            <div class="bottom">
+                                <p class="message">Quick group meetings for multiple teams</p>
+                        <a href="#">Buy Tickets</a>
+                            </div>
+                        </div>
+                        
+
+                    </div>
+                    <div class="card">
+                        <div class="hero">
+                            <h2>Gold</h2>
+                            <h3>$840</h3>
+                        </div>
+
+                        <div class="pricing--body">
+                            <p><i class="fa-solid fa-mug-saucer"></i> All-Day Coffee + Snacks</p>
+                            <p> <i class="fa-solid fa-gamepad"></i> Group Meetings + After Party</p>
+                            <p><i class="fa-solid fa-message"></i> 24/7 Support + Instant Chats</p>
+                            <div class="bottom">
+                                <p class="message">Quick group meetings for multiple teams</p>
+                        <a href="#">Buy Tickets</a>
+                            </div>
+                        </div>
+                        
+
+                    </div>
+                    <div class="card">
+                        <div class="hero">
+                            <h2>Platinum</h2>
+                            <h3>$1,240</h3>
+                        </div>
+
+                        <div class="pricing--body">
+                            <p><i class="fa-solid fa-money-bill"></i> Cashback $200</p>
+                            <p> <i class="fa-solid fa-gamepad"></i> Private Meetings + After Party</p>
+                            <p><i class="fa-solid fa-message"></i> 24/7 Support + Instant Chats</p>
+                            <div class="bottom">
+                                <p class="message">Quick group meetings for multiple teams</p>
+                        <a href="#">Buy Tickets</a>
+                            </div>
+                        </div>
+                        
+
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <section id="venue">
+        <div class="container">
+            
+            
+            <div class="contents">
+                <div class="venue-header">
+                    <h2>Here you go <u>Venue</u></h2>
+                
+                </div>
+
+                <div class="sub-contents">
+                    <div class="map">
+                    <iframe title="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1511.091461689997!2d-73.9866630916883!3d40.758001294831736!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25855a96da09d%3A0x860bf5a5e1a00a68!2sTimes%20Square%2C%20New%20York%2C%20NY%2010036%2C%20USA!5e0!3m2!1sen!2ssg!4v1643035529098!5m2!1sen!2ssg" width="100%" height="371.59" frameborder="0"></iframe>
+                    
+                </div>
+
+                <div class="address">
+                    <div class="address-header">
+                        <h2>Times Square</h2>
+                    </div>
+                    <div class="info">
+                        <h3><i class="fa-solid fa-location-dot"></i>102 South. 7th Street, New York, NY 10036, USA</h3>
+                        <p><i class="fa-solid fa-envelope"></i> hi@company.com</p>
+                        <p><i class="fa-solid fa-phone"></i> 010-020-0340</p>
+                    </div>
+                    </div>
+                </div>
+
+                
+            </div>
+        </div>
+    </section>
+
+
+    <section id="contact">
+
+        <div class="container">
+            <div class="contents">
+            
+                <div class="form">
+                    <div class="form-header">
+                        <h2>Please Say Hi</h2>
+                    </div>
+                    <form action="#">
+
+                        <div class="required">
+                            <label for="name">
+                                <input type="text" placeholder="Name">
+                            </label>
+                            <label for="email">
+                                <input type="email" placeholder="Email">
+                            </label>
+                            <label for="subject">
+                                <input type="text" placeholder="Subject">
+                            </label>
+                        </div>
+
+                        <textarea name="message" placeholder="Message"></textarea>
+                       
+                        <button type="submit">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <footer>
+        <div class="container">
+
+            <div class="contents">
+
+                <div class="footer">
+                    <div class="footer-head">
+                        <div class="logo">
+                            <i class="fa-solid fa-bullseye"></i> 
+                        <h3>leadership<br> event</h3>
+                        </div>
+                        <div class="social-media-links">
+                            <i class="fa-brands fa-facebook"></i>
+                            <i class="fa-brands fa-instagram"></i>
+                            <i class="fa-brands fa-whatsapp"></i>
+                            <i class="fa-brands fa-youtube"></i>
+
+                        </div>
+                </div>
+
+                <div class="footer-foot">
+
+                        
+                        <ul>
+                        <li>Our Story</li>
+                        <li>Code of Conduct</li>
+                        <li>Privacy and Terms</li>
+                        <li>Contact</li>
+                    </ul>
+
+                    <div class="copyright-btn">
+                    <div class="copyright">
+                        <p>Copyright © 2022 Leadership Event Co., Ltd.
+    All Rights Reserved.</p>
+                        <p>Design: <a href="#">TemplateMo</a></p>
+                    </div>
+                    <div class="btn">
+                        <a href="#home"><i class="fa-solid fa-arrow-up"></i></a>
+                    </div>
+
+                    </div>
+                    
+                    
+
+
+                </div>
+                
+
+                </div>
+                
+                
+                
+            </div>
+             
+        </div>
+       
+
+    </footer>
+
+    <script>
+    const menu = document.querySelector('#mobile-menu');
+    const menuLinks = document.querySelector('.nav-menu');
+
+    // Marka la riixo hamburger-ka
+    menu.addEventListener('click', function() {
+        menuLinks.classList.toggle('active');
+    });
+
+    // Marka link la riixo inuu menu-ga xirmo
+    document.querySelectorAll('.nav-menu li a').forEach(n => n.addEventListener('click', () => {
+        menuLinks.classList.remove('active');
+    }));
+</script>
+    
+
 
 </body>
 </html>
